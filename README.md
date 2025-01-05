@@ -21,7 +21,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/electron-react-json-task.git
+   git clone https://github.com/miravanisri/Electron_React_Json_Task.git
    ```
 
 2. Navigate to the project directory:
@@ -96,15 +96,6 @@ The following is an example of the data stored in the `product.json` file:
   "sku": "1307A 0101000"
 }
 ```
-
-## Contributing
-
-If you wish to contribute to this project, feel free to fork it, create a new branch, and submit a pull request. Make sure to follow the code of conduct and adhere to the coding standards.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [React](https://reactjs.org/) for the frontend framework.
