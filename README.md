@@ -15,12 +15,13 @@ An Electron application integrated with a React frontend for managing JSON files
 Make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (v16.x or higher)
 - [npm](https://www.npmjs.com/) (Node package manager)
+- [Electron](https://www.electronjs.org/) (for backend)
 
 ### Steps to Install
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/miravanisri/Electron_React_Json_Task.git
+   git clone https://github.com/yourusername/electron-react-json-task.git
    ```
 
 2. Navigate to the project directory:
@@ -43,39 +44,44 @@ Make sure you have the following installed:
 
 ## Usage
 
-### Development Mode
+### Running Backend (Electron)
 
-To run the project in development mode:
+To run the Electron app (backend) separately:
 
-1. Start the React development server:
+1. Navigate to the `Electron-task` directory:
    ```bash
-   cd frontend
-   npm run dev
+   cd Electron-task
    ```
 
-   This will start both the React app and the Electron app concurrently.
-
-2. Open your browser and go to `http://localhost:5173` to view the React frontend. The Electron app will launch in the background, handling the file operations.
-
-### Build for Production
-
-To build the app for production:
-
-1. First, build the React app:
+2. Run Electron:
    ```bash
-   cd frontend
-   npm run build
-   ```
-
-2. Then, run Electron:
-   ```bash
-   cd ../Electron-task
    npm run electron-start
    ```
 
-This will build the app and open it as a standalone Electron application.
+   This will start the Electron app and it will wait for communication from the frontend (React app).
 
-## File Operations
+### Running Frontend (React)
+
+To run the React frontend separately:
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Run the React development server:
+   ```bash
+   npm run dev
+   ```
+
+   This will start the React app and open it in your default browser, usually at `http://localhost:5173`.
+
+### Workflow
+
+- **Frontend**: The React app will be available at `http://localhost:5173` and will communicate with the Electron backend for reading and writing JSON files.
+- **Backend**: The Electron app will handle the file I/O operations, responding to requests from the frontend via IPC (Inter-Process Communication).
+
+### File Operations
 
 - **Write JSON**: The app allows users to write product data to a `product.json` file. The JSON file is saved to the current working directory.
 - **Read JSON**: The app can read the `product.json` file and display its contents in the frontend.
@@ -91,6 +97,14 @@ The following is an example of the data stored in the `product.json` file:
 }
 ```
 
+## Contributing
+
+If you wish to contribute to this project, feel free to fork it, create a new branch, and submit a pull request. Make sure to follow the code of conduct and adhere to the coding standards.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Acknowledgements
 
 - [React](https://reactjs.org/) for the frontend framework.
@@ -98,6 +112,3 @@ The following is an example of the data stored in the `product.json` file:
 - [Vite](https://vitejs.dev/) for fast and efficient frontend development.
 
 ---
-
-
-
