@@ -1,0 +1,21 @@
+{
+  "name": "electron-react-json-task",
+  "version": "1.0.0",
+  "description": "Electron app with React frontend to manage JSON files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
+    "react-start": "cd app && npm start",
+    "electron-start": "electron .",
+    "build": "cd app && npm run build && electron ."
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "electron": "^26.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.1.8"
+  }
+}
